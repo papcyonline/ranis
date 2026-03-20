@@ -344,57 +344,15 @@ export default function Home() {
       {/* STYLIST */}
       <section className="px-3 md:px-4 pb-8 md:pb-16">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-card rounded-xl border border-white/5 overflow-hidden flex flex-col md:flex-row md:h-72">
-            <div className="h-56 md:w-1/3 md:h-full relative">
-              <Image src="/image (2).webp" alt="Your stylist" fill className="object-cover" />
+          <div className="bg-card rounded-xl border border-white/5 p-6 md:p-10 text-center">
+            <div className="w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden relative mx-auto mb-4 border-2 border-pink">
+              <Image src="/hair stylist.webp" alt="Your stylist" fill className="object-cover" />
             </div>
-            <div className="md:w-2/3 flex flex-col justify-center p-5 md:p-10">
-              <h2 className="font-playfair text-2xl md:text-3xl font-bold text-white mb-3 uppercase tracking-wider">Meet Your Stylist</h2>
-              <p className="text-white/70 text-xs md:text-sm leading-relaxed uppercase">
-                With years of experience in protective styling, your stylist specializes in knotless braids, bohemian styles, faux locs, and more. Every client receives personalized attention and care to ensure you leave feeling confident and beautiful. Quality and precision are at the heart of every style.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* SOCIAL */}
-      <section className="px-3 md:px-4 pb-8 md:pb-16">
-        <div className="max-w-5xl mx-auto">
-          <div className="bg-pink-950 rounded-xl border border-white/10 overflow-hidden">
-            {/* Top bar — Instagram style profile header */}
-            <div className="flex items-center gap-3 p-4 md:p-5 border-b border-white/10">
-              <div className="w-12 h-12 md:w-14 md:h-14 rounded-full border-2 border-pink overflow-hidden relative flex-shrink-0">
-                <Image src="/ranisbraids logo.jpeg" alt="ranisbraids" fill className="object-cover" />
-              </div>
-              <div className="flex-1">
-                <div className="flex items-center gap-2">
-                  <p className="text-white font-semibold text-sm md:text-base">@ranisbraids</p>
-                  <InstagramIcon sx={{ fontSize: 18 }} className="text-pink" />
-                </div>
-                <p className="text-white/50 text-xs">Follow us for the latest styles</p>
-              </div>
-            </div>
-            {/* Images grid */}
-            <div className="grid grid-cols-3">
-              {["/image.webp", "/image (1).webp", "/image (2).webp"].map((src, i) => (
-                <div key={i} className="relative group aspect-square">
-                  <Image src={src} alt={`Client style ${i + 1}`} fill className="object-cover" />
-                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
-                    <FavoriteIcon sx={{ fontSize: 28 }} className="text-white" />
-                  </div>
-                </div>
-              ))}
-            </div>
-            {/* Bottom bar */}
-            <div className="p-4 md:p-5 border-t border-white/10 flex items-center justify-between">
-              <div className="flex items-center gap-4">
-                <FavoriteIcon sx={{ fontSize: 22 }} className="text-white" />
-                <ChatBubbleOutlineIcon sx={{ fontSize: 22 }} className="text-white" />
-                <SendIcon sx={{ fontSize: 22 }} className="text-white" />
-              </div>
-              <p className="text-white/50 text-xs uppercase tracking-wide">Tag us in your photos</p>
-            </div>
+            <h2 className="font-playfair text-2xl md:text-3xl font-bold text-white mb-1 uppercase tracking-wider">Meet Your Stylist</h2>
+            <div className="w-12 h-0.5 bg-pink mx-auto my-3" />
+            <p className="text-white/60 text-xs md:text-sm leading-relaxed max-w-lg mx-auto">
+              With years of experience in protective styling, specializing in knotless braids, bohemian styles, faux locs, and more. Every client receives personalized attention and care to leave feeling confident and beautiful. Quality and precision are at the heart of every style.
+            </p>
           </div>
         </div>
       </section>
@@ -747,6 +705,44 @@ export default function Home() {
                   Book Another
                 </button>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SOCIAL */}
+      <section className="px-3 md:px-4 pb-8 md:pb-16">
+        <div className="max-w-5xl mx-auto">
+          <div className="bg-pink-950 rounded-xl border border-white/10 overflow-hidden">
+            <div className="flex items-center gap-3 p-4 md:p-5 border-b border-white/10">
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-full border-2 border-pink overflow-hidden relative flex-shrink-0">
+                <Image src="/ranisbraids logo.jpeg" alt="ranisbraids" fill className="object-cover" />
+              </div>
+              <div className="flex-1">
+                <div className="flex items-center gap-2">
+                  <p className="text-white font-semibold text-sm md:text-base">@ranisbraids</p>
+                  <InstagramIcon sx={{ fontSize: 18 }} className="text-pink" />
+                </div>
+                <p className="text-white/50 text-xs">Follow us for the latest styles</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-3">
+              {["/image.webp", "/image (1).webp", "/image (2).webp"].map((src, i) => (
+                <div key={i} className="relative group aspect-square">
+                  <Image src={src} alt={`Client style ${i + 1}`} fill className="object-cover" />
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+                    <FavoriteIcon sx={{ fontSize: 28 }} className="text-white" />
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="p-4 md:p-5 border-t border-white/10 flex items-center justify-between">
+              <div className="flex items-center gap-4">
+                <FavoriteIcon sx={{ fontSize: 22 }} className="text-white" />
+                <ChatBubbleOutlineIcon sx={{ fontSize: 22 }} className="text-white" />
+                <SendIcon sx={{ fontSize: 22 }} className="text-white" />
+              </div>
+              <p className="text-white/50 text-xs uppercase tracking-wide">Tag us in your photos</p>
             </div>
           </div>
         </div>
