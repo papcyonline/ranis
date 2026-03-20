@@ -234,23 +234,25 @@ export default function Home() {
       {/* HERO */}
       <section className="pt-6 md:pt-10 pb-8 md:pb-16 px-3 md:px-4">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-card rounded-xl overflow-hidden border border-white/5 flex flex-row h-40 md:h-80">
-            <div className="w-1/3 md:w-1/2 relative">
-              <Image
-                src="/image.webp"
-                alt="Braids showcase"
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
-            <div className="w-2/3 md:w-1/2 flex flex-col items-center justify-center p-4 md:p-10 text-center">
-              <h1 className="font-playfair text-lg md:text-5xl font-bold text-white mb-2 md:mb-4 tracking-wide uppercase">
-                Welcome to Ranisbraids
+          <div className="relative rounded-xl overflow-hidden border border-white/5 h-48 md:h-96">
+            <Image
+              src="/image.webp"
+              alt="Braids showcase"
+              fill
+              className="object-cover"
+              priority
+            />
+            <div className="absolute inset-0 bg-black/50" />
+            <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
+              <p className="text-xs md:text-sm text-white/70 uppercase tracking-widest mb-1 md:mb-2">Welcome to</p>
+              <h1 className="font-playfair text-2xl md:text-6xl font-bold text-white mb-2 md:mb-4 tracking-wide uppercase">
+                Ranisbraids
               </h1>
-              <p className="text-xs md:text-2xl text-white/80 italic font-light">
+              <div className="w-16 md:w-24 h-0.5 bg-pink mx-auto mb-2 md:mb-4" />
+              <p className="text-sm md:text-2xl text-white/90 italic font-light">
                 We Braid From The Heart
               </p>
+              <p className="text-xs md:text-sm text-white/50 mt-2 md:mt-4">Your style, our passion</p>
             </div>
           </div>
           <div className="bg-card rounded-xl overflow-hidden border border-white/5 mt-3 md:mt-4">
