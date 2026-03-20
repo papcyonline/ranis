@@ -1,7 +1,13 @@
 import { Resend } from "resend";
 import twilio from "twilio";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+function getResendClient() {
+  const key = process.env.RESEND_API_KEY;
+  if (key && key !== "your_resend_api_key_here") {
+    return new Resend(key);
+  }
+  return null;
+}
 
 function getTwilioClient() {
   const sid = process.env.TWILIO_ACCOUNT_SID;
@@ -27,6 +33,8 @@ interface BookingDetails {
 // ===== EMAIL =====
 
 export async function sendSalonEmail(booking: BookingDetails) {
+  const resend = getResendClient();
+  if (!resend) return;
   try {
     await resend.emails.send({
       from: "ranisbraids <onboarding@resend.dev>",
@@ -53,6 +61,8 @@ export async function sendSalonEmail(booking: BookingDetails) {
 }
 
 export async function sendClientEmail(booking: BookingDetails, clientEmail: string) {
+  const resend = getResendClient();
+  if (!resend) return;
   try {
     await resend.emails.send({
       from: "ranisbraids <onboarding@resend.dev>",
