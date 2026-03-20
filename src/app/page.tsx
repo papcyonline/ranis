@@ -280,19 +280,19 @@ export default function Home() {
             <div className="grid grid-cols-2 lg:grid-cols-4">
               <div className="p-4 md:p-5">
                 <h3 className="text-white font-bold text-lg md:text-xl mb-2 uppercase tracking-wide">Cancellations</h3>
-                <p className="text-white/70 text-xs uppercase">A 24 hour notice is required prior to cancellation or rescheduling of any service.</p>
+                <p className="text-white/70 text-xs">A 24 hour notice is required prior to cancellation or rescheduling of any service.</p>
               </div>
               <div className="border-l border-white/10 p-4 md:p-5">
                 <h3 className="text-white font-bold text-lg md:text-xl mb-2 uppercase tracking-wide">Payments</h3>
-                <p className="text-white/70 text-xs uppercase">$75–$100 non-refundable deposit is required! The remaining balance can be paid in cash, Apple Pay or Zelle.</p>
+                <p className="text-white/70 text-xs">$75–$100 non-refundable deposit is required! The remaining balance can be paid in cash, Apple Pay or Zelle.</p>
               </div>
               <div className="border-t lg:border-t-0 lg:border-l border-white/10 p-4 md:p-5">
                 <h3 className="text-white font-bold text-lg md:text-xl mb-2 uppercase tracking-wide">Guests</h3>
-                <p className="text-white/70 text-xs uppercase">For safety and sanitation reasons, no extra guests are allowed.</p>
+                <p className="text-white/70 text-xs">For safety and sanitation reasons, no extra guests are allowed.</p>
               </div>
               <div className="border-t border-l lg:border-t-0 border-white/10 p-4 md:p-5">
                 <h3 className="text-white font-bold text-lg md:text-xl mb-2 uppercase tracking-wide">Late Arrivals</h3>
-                <p className="text-white/70 text-xs uppercase">Please arrive on time. A 15 minute grace period is given. Appointment will be cancelled at 30 minutes.</p>
+                <p className="text-white/70 text-xs">Please arrive on time. A 15 minute grace period is given. Appointment will be cancelled at 30 minutes.</p>
               </div>
             </div>
           </div>
@@ -302,37 +302,37 @@ export default function Home() {
       {/* PREPARE */}
       <section className="px-3 md:px-4 pb-8 md:pb-16">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-card rounded-xl border border-white/5 p-5 md:p-6">
+          <div className="bg-pink-950 rounded-xl border border-white/10 p-5 md:p-6">
             <h2 className="font-playfair text-2xl md:text-3xl font-bold text-white text-center mb-5 md:mb-6 uppercase tracking-wider">Prepare for Your Appointment</h2>
             <div className="rounded-lg border border-white/5 overflow-hidden">
-              <div className="flex items-center gap-3 px-4 py-3 bg-[#111111]">
+              <div className="flex items-center gap-3 px-4 py-3">
                 <ShowerIcon sx={{ fontSize: 24 }} className="text-white flex-shrink-0" />
-                <p className="text-white/70 text-xs uppercase">Wash and blow dry hair</p>
+                <p className="text-white/70 text-xs">Wash and blow dry hair</p>
               </div>
               <hr className="border-white/10" />
-              <div className="flex items-center gap-3 px-4 py-3 bg-[#1A1A1A]">
+              <div className="flex items-center gap-3 px-4 py-3">
                 <BlockIcon sx={{ fontSize: 24 }} className="text-white flex-shrink-0" />
-                <p className="text-white/70 text-xs uppercase">Arrive product free</p>
+                <p className="text-white/70 text-xs">Arrive product free</p>
               </div>
               <hr className="border-white/10" />
-              <div className="flex items-center gap-3 px-4 py-3 bg-[#111111]">
+              <div className="flex items-center gap-3 px-4 py-3">
                 <PaymentsIcon sx={{ fontSize: 24 }} className="text-white flex-shrink-0" />
-                <p className="text-white/70 text-xs uppercase">Pay remaining balance</p>
+                <p className="text-white/70 text-xs">Pay remaining balance</p>
               </div>
               <hr className="border-white/10" />
-              <div className="flex items-center gap-3 px-4 py-3 bg-[#1A1A1A]">
+              <div className="flex items-center gap-3 px-4 py-3">
                 <AccessTimeIcon sx={{ fontSize: 24 }} className="text-white flex-shrink-0" />
-                <p className="text-white/70 text-xs uppercase">Arrive on time</p>
+                <p className="text-white/70 text-xs">Arrive on time</p>
               </div>
               <hr className="border-white/10" />
-              <div className="flex items-center gap-3 px-4 py-3 bg-[#111111]">
+              <div className="flex items-center gap-3 px-4 py-3">
                 <PersonOffIcon sx={{ fontSize: 24 }} className="text-white flex-shrink-0" />
-                <p className="text-white/70 text-xs uppercase">No extra guests</p>
+                <p className="text-white/70 text-xs">No extra guests</p>
               </div>
               <hr className="border-white/10" />
-              <div className="flex items-center gap-3 px-4 py-3 bg-[#1A1A1A]">
+              <div className="flex items-center gap-3 px-4 py-3">
                 <SickIcon sx={{ fontSize: 24 }} className="text-white flex-shrink-0" />
-                <p className="text-white/70 text-xs uppercase">Cancel/reschedule if feeling sick</p>
+                <p className="text-white/70 text-xs">Cancel/reschedule if feeling sick</p>
               </div>
             </div>
           </div>
@@ -359,27 +359,39 @@ export default function Home() {
       {/* SOCIAL */}
       <section className="px-3 md:px-4 pb-8 md:pb-16">
         <div className="max-w-5xl mx-auto">
-          <div className="bg-card rounded-xl border border-white/5 p-5 md:p-6">
-            <div className="flex items-center justify-center gap-2 md:gap-3 mb-2">
-              <InstagramIcon sx={{ fontSize: 26 }} className="text-white" />
-              <h2 className="font-playfair text-2xl md:text-3xl font-bold text-white uppercase tracking-wider">Tag Us on Social Media</h2>
+          <div className="bg-pink-950 rounded-xl border border-white/10 overflow-hidden">
+            {/* Top bar — Instagram style profile header */}
+            <div className="flex items-center gap-3 p-4 md:p-5 border-b border-white/10">
+              <div className="w-12 h-12 md:w-14 md:h-14 rounded-full border-2 border-pink overflow-hidden relative flex-shrink-0">
+                <Image src="/ranisbraids logo.jpeg" alt="ranisbraids" fill className="object-cover" />
+              </div>
+              <div className="flex-1">
+                <div className="flex items-center gap-2">
+                  <p className="text-white font-semibold text-sm md:text-base">@ranisbraids</p>
+                  <InstagramIcon sx={{ fontSize: 18 }} className="text-pink" />
+                </div>
+                <p className="text-white/50 text-xs">Follow us for the latest styles</p>
+              </div>
             </div>
-            <p className="text-white/50 text-xs md:text-sm text-center mb-4 md:mb-6 uppercase">Show off your new look! Tag <span className="text-white font-medium">@ranisbraids</span> on Instagram</p>
-            <div className="grid grid-cols-3 gap-2 md:gap-3">
+            {/* Images grid */}
+            <div className="grid grid-cols-3">
               {["/image.webp", "/image (1).webp", "/image (2).webp"].map((src, i) => (
-                <div key={i} className="relative rounded-lg overflow-hidden group">
-                  <div className="relative h-32 md:h-72">
-                    <Image src={src} alt={`Client style ${i + 1}`} fill className="object-cover" />
-                  </div>
+                <div key={i} className="relative group aspect-square">
+                  <Image src={src} alt={`Client style ${i + 1}`} fill className="object-cover" />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
-                    <div className="flex gap-3 md:gap-4">
-                      <FavoriteIcon sx={{ fontSize: 24 }} className="text-white" />
-                      <ChatBubbleOutlineIcon sx={{ fontSize: 24 }} className="text-white" />
-                      <SendIcon sx={{ fontSize: 24 }} className="text-white" />
-                    </div>
+                    <FavoriteIcon sx={{ fontSize: 28 }} className="text-white" />
                   </div>
                 </div>
               ))}
+            </div>
+            {/* Bottom bar */}
+            <div className="p-4 md:p-5 border-t border-white/10 flex items-center justify-between">
+              <div className="flex items-center gap-4">
+                <FavoriteIcon sx={{ fontSize: 22 }} className="text-white" />
+                <ChatBubbleOutlineIcon sx={{ fontSize: 22 }} className="text-white" />
+                <SendIcon sx={{ fontSize: 22 }} className="text-white" />
+              </div>
+              <p className="text-white/50 text-xs uppercase tracking-wide">Tag us in your photos</p>
             </div>
           </div>
         </div>
@@ -406,7 +418,7 @@ export default function Home() {
                         {service.options.length > 0 ? (
                           <button
                             onClick={() => handleCategorySelect(service)}
-                            className="bg-white text-[#000000] text-xs font-semibold uppercase tracking-wide px-4 py-1.5 rounded flex-shrink-0 ml-3 hover:bg-white/80 transition-colors"
+                            className="bg-pink text-white text-xs font-semibold uppercase tracking-wide px-4 py-1.5 rounded flex-shrink-0 ml-3 hover:bg-pink-light transition-colors"
                           >
                             Select
                           </button>
@@ -457,7 +469,7 @@ export default function Home() {
                           </div>
                           <button
                             onClick={() => goToAppointment(opt)}
-                            className="bg-white text-[#000000] text-xs font-semibold uppercase tracking-wide px-4 py-1.5 rounded flex-shrink-0 ml-3 hover:bg-white/80 transition-colors"
+                            className="bg-pink text-white text-xs font-semibold uppercase tracking-wide px-4 py-1.5 rounded flex-shrink-0 ml-3 hover:bg-pink-light transition-colors"
                           >
                             Select
                           </button>
