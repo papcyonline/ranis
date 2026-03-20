@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-pink-50: #FEE6FE;
+  --color-pink-100: #FEB9FB;
+  --color-pink-200: #FD8CF9;
+  --color-pink-300: #FC5FF7;
+  --color-pink-400: #FB32F4;
+  --color-pink-500: #FA0CF4;
+  --color-pink-600: #CD04C6;
+  --color-pink-700: #A0039B;
+  --color-pink-800: #73026F;
+  --color-pink-900: #460144;
+  --color-pink-950: #190118;
+  --color-pink: #FA0CF4;
+  --color-pink-light: #FB32F4;
+  --color-pink-dark: #CD04C6;
+  --color-dark: #000000;
+  --color-darker: #000000;
+  --color-card: #111111;
+  --color-card-hover: #1A1A1A;
+  --font-playfair: var(--font-playfair);
+  --font-montserrat: var(--font-montserrat);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #000000;
+  color: #ffffff;
+  font-family: var(--font-montserrat), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+}
