@@ -1,8 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
-import CloseIcon from "@mui/icons-material/Close";
+
 import ShowerIcon from "@mui/icons-material/Shower";
 import BlockIcon from "@mui/icons-material/Block";
 import PaymentsIcon from "@mui/icons-material/Payments";
@@ -21,29 +20,8 @@ import ScheduleIcon from "@mui/icons-material/Schedule";
 const SQUARE_BOOKING_URL = "https://book.squareup.com/appointments/92su5oigdzi0h1/location/LPF2VRFQNETAF/services";
 
 export default function Home() {
-  const [bookingOpen, setBookingOpen] = useState(false);
-
   return (
     <div className="min-h-screen bg-darker">
-      {/* BOOKING MODAL */}
-      {bookingOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center">
-          <div className="absolute inset-0 bg-black/80" onClick={() => setBookingOpen(false)} />
-          <div className="relative w-full max-w-2xl mx-3 h-[90vh] bg-white rounded-xl overflow-hidden">
-            <button
-              onClick={() => setBookingOpen(false)}
-              className="absolute top-3 right-3 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full w-8 h-8 flex items-center justify-center transition-colors"
-            >
-              <CloseIcon sx={{ fontSize: 20 }} />
-            </button>
-            <iframe
-              src={SQUARE_BOOKING_URL}
-              title="Book an appointment"
-              className="w-full h-full border-0"
-            />
-          </div>
-        </div>
-      )}
       {/* HERO */}
       <section className="pt-6 md:pt-10 pb-8 md:pb-16 px-3 md:px-4">
         <div className="max-w-5xl mx-auto">
@@ -174,15 +152,17 @@ export default function Home() {
       <section id="services" className="py-8 md:py-16 px-3 md:px-4">
         <div className="max-w-5xl mx-auto">
           <div className="bg-card rounded-xl border border-white/5 overflow-hidden">
-            <div className="p-6 md:p-10 text-center">
-              <h2 className="font-playfair text-2xl md:text-3xl font-bold text-white mb-2 uppercase tracking-wider">Book Your Appointment</h2>
-              <p className="text-white/50 mb-6 uppercase tracking-wide text-xs">Select a service to get started</p>
-              <button
-                onClick={() => setBookingOpen(true)}
-                className="inline-block bg-pink text-white font-bold py-3 px-10 rounded-lg hover:bg-pink-light transition-colors uppercase tracking-wide text-sm"
-              >
-                Book Now
-              </button>
+            <div className="p-5 md:p-6">
+              <h2 className="font-playfair text-2xl md:text-3xl font-bold text-white text-center mb-2 uppercase tracking-wider">Book Your Appointment</h2>
+              <p className="text-white/50 text-center mb-6 uppercase tracking-wide text-xs">Select a service to get started</p>
+              <iframe
+                src={SQUARE_BOOKING_URL}
+                title="Book an appointment"
+                className="w-full border-0 rounded-lg bg-white"
+                style={{ minHeight: "800px" }}
+                allow="payment"
+                sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
+              />
             </div>
           </div>
         </div>
