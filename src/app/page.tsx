@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { services } from "@/data/services";
+
 import ShowerIcon from "@mui/icons-material/Shower";
 import BlockIcon from "@mui/icons-material/Block";
 import PaymentsIcon from "@mui/icons-material/Payments";
@@ -152,36 +152,14 @@ export default function Home() {
       <section id="services" className="py-8 md:py-16 px-3 md:px-4">
         <div className="max-w-5xl mx-auto">
           <div className="bg-card rounded-xl border border-white/5 overflow-hidden">
-            <div className="p-5 md:p-6">
-              <h2 className="font-playfair text-2xl md:text-3xl font-bold text-white text-center mb-2 uppercase tracking-wider">Our Services</h2>
-              <p className="text-white/50 text-center mb-6 uppercase tracking-wide text-xs">Browse our styles and book your appointment</p>
-              <div className="rounded-lg border border-white/5 overflow-hidden mb-6">
-                {services.map((service, index) => (
-                  <div key={service.id}>
-                    <div className={`flex items-center justify-between px-4 py-3 ${index % 2 === 0 ? "bg-[#111111]" : "bg-[#1A1A1A]"}`}>
-                      <div>
-                        <h3 className="text-white font-semibold text-xs md:text-sm uppercase tracking-wide leading-tight">{service.name}</h3>
-                        {service.options.length > 0 && (
-                          <p className="text-white/40 text-xs mt-0.5">
-                            {service.options.length === 1
-                              ? `$${service.options[0].price} · ${service.options[0].duration}`
-                              : `From $${Math.min(...service.options.map(o => o.price))}`
-                            }
-                          </p>
-                        )}
-                      </div>
-                      {service.options.length === 0 && (
-                        <span className="text-white/30 text-xs uppercase flex-shrink-0 ml-3">Inquire</span>
-                      )}
-                    </div>
-                  </div>
-                ))}
-              </div>
+            <div className="p-6 md:p-10 text-center">
+              <h2 className="font-playfair text-2xl md:text-3xl font-bold text-white mb-2 uppercase tracking-wider">Book Your Appointment</h2>
+              <p className="text-white/50 mb-6 uppercase tracking-wide text-xs">Schedule through our booking system</p>
               <a
                 href={SQUARE_BOOKING_URL}
                 target="_top"
                 rel="nofollow"
-                className="block w-full bg-pink text-white font-bold py-3 rounded-lg hover:bg-pink-light transition-colors uppercase tracking-wide text-sm text-center"
+                className="inline-block bg-pink text-white font-bold py-3 px-10 rounded-lg hover:bg-pink-light transition-colors uppercase tracking-wide text-sm"
               >
                 Book Now
               </a>
