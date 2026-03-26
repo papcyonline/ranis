@@ -161,6 +161,7 @@ export default function Home() {
                 className="w-full border-0 rounded-lg bg-white"
                 style={{ minHeight: "800px" }}
                 allow="payment"
+                sandbox="allow-same-origin allow-scripts allow-forms allow-popups"
               />
             </div>
           </div>
