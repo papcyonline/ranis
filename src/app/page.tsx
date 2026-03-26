@@ -17,7 +17,7 @@ import EmailIcon from "@mui/icons-material/Email";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import ScheduleIcon from "@mui/icons-material/Schedule";
 
-const SQUARE_BOOKING_URL = "https://app.squareup.com/appointments/book/92su5oigdzi0h1/LPF2VRFQNETAF/start";
+const SQUARE_BOOKING_URL = "https://book.squareup.com/appointments/92su5oigdzi0h1/location/LPF2VRFQNETAF/services";
 
 export default function Home() {
   return (
@@ -152,17 +152,16 @@ export default function Home() {
       <section id="services" className="py-8 md:py-16 px-3 md:px-4">
         <div className="max-w-5xl mx-auto">
           <div className="bg-card rounded-xl border border-white/5 overflow-hidden">
-            <div className="p-6 md:p-10 text-center">
-              <h2 className="font-playfair text-2xl md:text-3xl font-bold text-white mb-2 uppercase tracking-wider">Book Your Appointment</h2>
-              <p className="text-white/50 mb-6 uppercase tracking-wide text-xs">Schedule through our booking system</p>
-              <a
-                href={SQUARE_BOOKING_URL}
-                target="_top"
-                rel="nofollow"
-                className="inline-block bg-pink text-white font-bold py-3 px-10 rounded-lg hover:bg-pink-light transition-colors uppercase tracking-wide text-sm"
-              >
-                Book Now
-              </a>
+            <div className="p-5 md:p-6">
+              <h2 className="font-playfair text-2xl md:text-3xl font-bold text-white text-center mb-2 uppercase tracking-wider">Book Your Appointment</h2>
+              <p className="text-white/50 text-center mb-6 uppercase tracking-wide text-xs">Select a service to get started</p>
+              <iframe
+                src={SQUARE_BOOKING_URL}
+                title="Book an appointment"
+                className="w-full border-0 rounded-lg bg-white"
+                style={{ minHeight: "800px" }}
+                allow="payment"
+              />
             </div>
           </div>
         </div>
