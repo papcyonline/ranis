@@ -6,7 +6,6 @@ import ShowerIcon from "@mui/icons-material/Shower";
 import BlockIcon from "@mui/icons-material/Block";
 import PaymentsIcon from "@mui/icons-material/Payments";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
-import PersonOffIcon from "@mui/icons-material/PersonOff";
 import SickIcon from "@mui/icons-material/Sick";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
@@ -77,13 +76,9 @@ export default function Home() {
               </div>
               <div className="border-l border-white/10 p-4 md:p-5">
                 <h3 className="text-white font-bold text-lg md:text-xl mb-2 uppercase tracking-wide">Payments</h3>
-                <p className="text-white/70 text-xs">$75–$100 non-refundable deposit is required! The remaining balance can be paid in cash, Apple Pay or Zelle.</p>
+                <p className="text-white/70 text-xs">$20 non-refundable deposit is required! The remaining balance can be paid in cash, Apple Pay or Zelle.</p>
               </div>
               <div className="border-t lg:border-t-0 lg:border-l border-white/10 p-4 md:p-5">
-                <h3 className="text-white font-bold text-lg md:text-xl mb-2 uppercase tracking-wide">Guests</h3>
-                <p className="text-white/70 text-xs">For safety and sanitation reasons, no extra guests are allowed.</p>
-              </div>
-              <div className="border-t border-l lg:border-t-0 border-white/10 p-4 md:p-5">
                 <h3 className="text-white font-bold text-lg md:text-xl mb-2 uppercase tracking-wide">Late Arrivals</h3>
                 <p className="text-white/70 text-xs">Please arrive on time. A 15 minute grace period is given. Appointment will be cancelled at 30 minutes.</p>
               </div>
@@ -116,11 +111,6 @@ export default function Home() {
               <div className="flex items-center gap-3 px-4 py-3">
                 <AccessTimeIcon sx={{ fontSize: 24 }} className="text-white flex-shrink-0" />
                 <p className="text-white/70 text-xs">Arrive on time</p>
-              </div>
-              <hr className="border-white/10" />
-              <div className="flex items-center gap-3 px-4 py-3">
-                <PersonOffIcon sx={{ fontSize: 24 }} className="text-white flex-shrink-0" />
-                <p className="text-white/70 text-xs">No extra guests</p>
               </div>
               <hr className="border-white/10" />
               <div className="flex items-center gap-3 px-4 py-3">
